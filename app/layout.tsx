@@ -12,9 +12,11 @@ const _geistSans = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Tongbill - Cafe Daily Calculator",
-  description: "Daily Sales Calculator for Your Cafe",
-    generator: 'v0.app'
+  title: "Tongbill",
+  description: "No Surprises — Just Your Total.",
+  icons: {
+    icon: "/coffee.png",
+  },
 }
 
 export default function RootLayout({
