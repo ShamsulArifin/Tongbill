@@ -165,7 +165,7 @@ export function MenuManager({ menuItems, onAddItem, onDeleteItem }: MenuManagerP
         {menuItems.length === 0 ? (
           <p className="text-sm text-muted-foreground">No menu items yet. Add your first item above.</p>
         ) : (
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-1">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1">
             {menuItems.map((item) => (
               <Card
                 key={item.id}
