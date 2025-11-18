@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
-import { X, Plus } from "lucide-react"
+import { X, Plus } from 'lucide-react'
 
 type MenuItem = {
   id: string
@@ -155,14 +155,14 @@ export function DailyBill({ menuItems, onSaveBill }: DailyBillProps) {
         {entries.length === 0 ? (
           <p className="text-sm text-muted-foreground">No items added yet</p>
         ) : (
-          <div className="space-y-2">
+          <div className="space-y-1">
             {entries.map((entry) => (
               <Card
                 key={entry.id}
-                className="p-3 sm:p-4 flex items-center justify-between bg-secondary/30 border-border"
+                className="p-1 flex items-center justify-between bg-secondary/30 border-border flex-row"
               >
                 <div className="flex-1 min-w-0">
-                  <p className="font-medium text-foreground text-xs sm:text-sm">{entry.name}</p>
+                  <p className="font-medium text-foreground text-xs">{entry.name}</p>
                   <p className="text-xs text-muted-foreground">
                     ৳{entry.price.toFixed(2)} × {entry.quantity} = ৳{entry.subtotal.toFixed(2)}
                   </p>
@@ -173,7 +173,7 @@ export function DailyBill({ menuItems, onSaveBill }: DailyBillProps) {
                   onClick={() => handleRemoveEntry(entry.id)}
                   className="text-destructive hover:bg-destructive/10 flex-shrink-0"
                 >
-                  <X className="w-4 h-4" />
+                  <X className="w-3 h-3" />
                 </Button>
               </Card>
             ))}
