@@ -96,7 +96,7 @@ export default function Home() {
         {/* Header */}
         <div className="mb-6 sm:mb-8">
           <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2">☕ Tongbill</h1>
-          <p className="text-sm sm:text-base text-muted-foreground">No Surprises — Just Your Total.</p>
+          <p className="text-sm sm:text-base text-muted-foreground">Daily Sales Calculator for Your Cafe</p>
         </div>
 
         {/* Tabs */}
@@ -134,8 +134,8 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className="mt-8 py-4 text-center text-xs sm:text-sm text-muted-foreground border-t border-border">
-        <p>Made with ❤️ by <a href="https://portfolio-eta-seven-57.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-500 cursor-pointer font-bold">Shamsul Arifin</a></p>
+      <footer className="footer-glass mt-8 py-4 text-center text-xs sm:text-sm text-muted-foreground">
+        <p>Made with ❤️ by<a href="https://portfolio-eta-seven-57.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-500 cursor-pointer font-bold">Shamsul Arifin</a></p>
       </footer>
     </main>
   )
