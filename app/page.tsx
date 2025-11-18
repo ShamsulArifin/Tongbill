@@ -96,7 +96,7 @@ export default function Home() {
         {/* Header */}
         <div className="mb-6 sm:mb-8">
           <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2">☕ Tongbill</h1>
-          <p className="text-sm sm:text-base text-muted-foreground">Daily Sales Calculator for Your Cafe</p>
+          <p className="text-sm sm:text-base text-muted-foreground">No Surprises — Just Your Total.</p>
         </div>
 
         {/* Tabs */}
