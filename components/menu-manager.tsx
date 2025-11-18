@@ -6,7 +6,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
-import { Trash2 } from "lucide-react"
+import { Trash2 } from 'lucide-react'
 
 type MenuItem = {
   id: string
@@ -165,26 +165,24 @@ export function MenuManager({ menuItems, onAddItem, onDeleteItem }: MenuManagerP
         {menuItems.length === 0 ? (
           <p className="text-sm text-muted-foreground">No menu items yet. Add your first item above.</p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-1">
             {menuItems.map((item) => (
               <Card
                 key={item.id}
-                className="p-3 sm:p-4 flex items-center justify-between bg-secondary/50 border-border"
+                className="p-1 flex items-center justify-between bg-secondary/50 border-border flex-row"
               >
-                <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-                  <span className="text-xl sm:text-2xl flex-shrink-0">{item.emoji}</span>
-                  <div className="min-w-0">
-                    <p className="font-medium text-foreground text-sm truncate">{item.name}</p>
-                    <p className="text-xs text-muted-foreground">৳{item.price.toFixed(2)}</p>
-                  </div>
+                <span className="text-sm">{item.emoji}</span>
+                <div className="text-center min-w-0 flex-1">
+                  <p className="font-medium text-foreground text-[10px] truncate">{item.name}</p>
+                  <p className="text-[9px] text-muted-foreground">৳{item.price.toFixed(2)}</p>
                 </div>
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={() => onDeleteItem(item.id)}
-                  className="text-destructive hover:bg-destructive/10 flex-shrink-0"
+                  className="text-destructive hover:bg-destructive/10 h-4 w-4 p-0"
                 >
-                  <Trash2 className="w-4 h-4" />
+                  <Trash2 className="w-2 h-2" />
                 </Button>
               </Card>
             ))}
