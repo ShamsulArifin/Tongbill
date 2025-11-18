@@ -1,0 +1,142 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.96 0.02 70);
+  --foreground: oklch(0.15 0.02 50);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.02 50);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.02 50);
+  --primary: oklch(0.55 0.15 60);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.78 0.08 55);
+  --secondary-foreground: oklch(0.15 0.02 50);
+  --muted: oklch(0.88 0.01 50);
+  --muted-foreground: oklch(0.45 0.02 50);
+  --accent: oklch(0.63 0.12 40);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.92 0.01 50);
+  --input: oklch(0.96 0.01 50);
+  --ring: oklch(0.63 0.12 40);
+  --chart-1: oklch(0.55 0.15 60);
+  --chart-2: oklch(0.68 0.1 50);
+  --chart-3: oklch(0.78 0.08 55);
+  --chart-4: oklch(0.45 0.08 40);
+  --chart-5: oklch(0.63 0.12 40);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.98 0 0);
+  --sidebar-foreground: oklch(0.15 0.02 50);
+  --sidebar-primary: oklch(0.55 0.15 60);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.78 0.08 55);
+  --sidebar-accent-foreground: oklch(0.15 0.02 50);
+  --sidebar-border: oklch(0.92 0.01 50);
+  --sidebar-ring: oklch(0.63 0.12 40);
+}
+
+.dark {
+  --background: oklch(0.18 0.02 50);
+  --foreground: oklch(0.95 0.01 50);
+  --card: oklch(0.22 0.01 50);
+  --card-foreground: oklch(0.95 0.01 50);
+  --popover: oklch(0.22 0.01 50);
+  --popover-foreground: oklch(0.95 0.01 50);
+  --primary: oklch(0.68 0.1 50);
+  --primary-foreground: oklch(0.15 0.02 50);
+  --secondary: oklch(0.35 0.05 55);
+  --secondary-foreground: oklch(0.95 0.01 50);
+  --muted: oklch(0.32 0.02 50);
+  --muted-foreground: oklch(0.65 0.02 50);
+  --accent: oklch(0.75 0.08 40);
+  --accent-foreground: oklch(0.15 0.02 50);
+  --destructive: oklch(0.63 0.25 25);
+  --destructive-foreground: oklch(0.95 0.01 50);
+  --border: oklch(0.32 0.01 50);
+  --input: oklch(0.28 0.01 50);
+  --ring: oklch(0.75 0.08 40);
+  --chart-1: oklch(0.68 0.1 50);
+  --chart-2: oklch(0.75 0.08 40);
+  --chart-3: oklch(0.62 0.08 55);
+  --chart-4: oklch(0.58 0.08 40);
+  --chart-5: oklch(0.72 0.08 50);
+  --sidebar: oklch(0.22 0.01 50);
+  --sidebar-foreground: oklch(0.95 0.01 50);
+  --sidebar-primary: oklch(0.68 0.1 50);
+  --sidebar-primary-foreground: oklch(0.15 0.02 50);
+  --sidebar-accent: oklch(0.35 0.05 55);
+  --sidebar-accent-foreground: oklch(0.95 0.01 50);
+  --sidebar-border: oklch(0.32 0.01 50);
+  --sidebar-ring: oklch(0.75 0.08 40);
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-playfair: "Playfair Display", serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced cafe-themed seamless SVG icon pattern with filled colors */
+@layer components {
+  .cafe-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='cafePattern' x='0' y='0' width='120' height='120' patternUnits='userSpaceOnUse'%3E%3C!-- Coffee Cup --%3E%3Cpath d='M20 30 L20 70 Q20 80 30 80 L50 80 Q60 80 60 70 L60 30 Z' fill='%23A0826D' opacity='0.12'/%3E%3Cpath d='M62 45 L70 40 Q72 40 72 42 L72 62 Q72 64 70 64 L62 60 Z' fill='%238B5A2B' opacity='0.12'/%3E%3C!-- Croissant --%3E%3Cellipse cx='85' cy='35' rx='18' ry='12' fill='%23D4A574' opacity='0.12' transform='rotate(-30 85 35)'/%3E%3Cpath d='M75 35 Q85 25 95 35' stroke='%23B8860B' stroke-width='2' fill='none' opacity='0.12'/%3E%3C!-- Pastry/Cake --%3E%3Crect x='30' y='95' width='35' height='20' rx='2' fill='%23E8B4A0' opacity='0.12'/%3E%3Ccircle cx='42' cy='92' r='3' fill='%23D97E7A' opacity='0.15'/%3E%3Ccircle cx='50' cy='91' r='3' fill='%23FFB6C1' opacity='0.15'/%3E%3Ccircle cx='58' cy='93' r='3' fill='%23D97E7A' opacity='0.15'/%3E%3C!-- Tea Cup --%3E%3Cellipse cx='90' cy='85' rx='12' ry='8' fill='%23F5DEB3' opacity='0.12'/%3E%3Cpath d='M105 80 L110 78 Q112 78 112 80 L112 85 Q112 87 110 87 L105 85 Z' fill='%238B4513' opacity='0.12'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='120' height='120' fill='%23FAFAF8' /%3E%3Crect width='120' height='120' fill='url(%23cafePattern)' /%3E%3C/svg%3E");
+    background-size: 120px 120px;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    position: relative;
+  }
+
+  .cafe-content {
+    position: relative;
+    z-index: 1;
+  }
+}
